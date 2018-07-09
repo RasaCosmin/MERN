@@ -1,7 +1,8 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const passport = require('passport');
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const passport = require("passport");
+var logger = require("morgan");
 
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
@@ -9,19 +10,24 @@ const posts = require("./routes/api/posts");
 
 const app = express();
 
+app.use(logger("dev"));
+
 //body parser
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
 app.use(bodyParser.json());
 
 //db config
-const db = require('./config/keys').mongoURI;
+const db = require("./config/keys").mongoURI;
 
 //connect to MongoDb
 mongoose
   .connect(
-    db, {
+    db,
+    {
       useNewUrlParser: true
     }
   )
@@ -32,7 +38,7 @@ mongoose
 app.use(passport.initialize());
 
 //passport config
-require('./config/passport')(passport);
+require("./config/passport")(passport);
 
 //use routes
 app.use("/api/users", users);
