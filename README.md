@@ -5,3 +5,4 @@ In order to run this project you need have nodejs installed and also to install 
 - npm i express mongoose passport passport-jwt jsonwebtoken body-parser bcryptjs validator --save
 - npm i -D nodemon
 - npm i gravatar --save
+- npm i morgan --save (for logger)
