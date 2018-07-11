@@ -8,7 +8,12 @@ In order to run this project you need have nodejs installed and also to install 
 - npm i morgan --save (for logger)
 - npm i concurrently --save
 
-Add react: 
+Add react:
+
 - npm i -g create-react-app
-Create react client app (folder clinet):
+  Create react client app (folder clinet):
 - create-react-app client
+
+Add redux:
+
+- npm i redux react-redux redux-thunk
