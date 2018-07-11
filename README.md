@@ -17,3 +17,7 @@ Add react:
 Add redux:
 
 - npm i redux react-redux redux-thunk
+
+Add jwd-decode to save user info
+
+- npm i jwt-decode
