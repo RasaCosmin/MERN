@@ -38,8 +38,8 @@ class Education extends Component {
         <table className="table">
           <thead>
             <tr>
-              <th>SChool</th>
-              <th>degree</th>
+              <th>School</th>
+              <th>Degree</th>
               <th>Years</th>
               <th />
             </tr>
